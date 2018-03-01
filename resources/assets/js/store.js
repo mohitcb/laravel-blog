@@ -16,9 +16,9 @@ export default {
 
 	actions:{
 		increment(context){
-			// setTimeout(() => {
+			setTimeout(() => {
 				context.commit('increment');
-			// },3000);
+			},1000);
 		}
 	},
 

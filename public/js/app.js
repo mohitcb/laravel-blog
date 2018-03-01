@@ -43863,9 +43863,9 @@ exports.clearImmediate = clearImmediate;
 
 	actions: {
 		increment: function increment(context) {
-			// setTimeout(() => {
-			context.commit('increment');
-			// },3000);
+			setTimeout(function () {
+				context.commit('increment');
+			}, 1000);
 		}
 	},
 
