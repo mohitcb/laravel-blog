@@ -43862,9 +43862,9 @@ exports.clearImmediate = clearImmediate;
 
 	actions: {
 		increment: function increment(context) {
-			// setTimeout(() => {
-			context.commit('increment');
-			// },3000);
+			setTimeout(function () {
+				context.commit('increment');
+			}, 1000);
 		}
 	},
 
@@ -44245,10 +44245,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -44322,17 +44318,9 @@ var staticRenderFns = [
     return _c("thead", [
       _c("th", [_vm._v("#")]),
       _vm._v(" "),
-      _c("th", [_vm._v("Cover Image")]),
-      _vm._v(" "),
-      _c("th"),
-      _vm._v(" "),
       _c("th", [_vm._v("Title")]),
       _vm._v(" "),
-      _c("th", [_vm._v("Body")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Created At")]),
-      _vm._v(" "),
-      _c("th")
+      _c("th", [_vm._v("Body")])
     ])
   }
 ]

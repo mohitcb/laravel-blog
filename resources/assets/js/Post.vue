@@ -3,12 +3,8 @@
             <table id="post-table" class="table">
                 <thead>
                     <th>#</th>
-                    <th>Cover Image</th>
-                    <th></th>
                     <th>Title</th>
                     <th>Body</th>
-                    <th>Created At</th>
-                    <th></th>
                 </thead>
 
                 <tbody>
