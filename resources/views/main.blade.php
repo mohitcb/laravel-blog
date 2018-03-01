@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     @include('partials._head')
+
+
   </head>
   
   <body>
 
     @include('partials._nav')    
 
-    <div class="container">
+    <div id="app" class="container">
       @include('partials._messages')
 
       @yield('content')
@@ -21,5 +23,6 @@
 
         @yield('scripts')
   </body>
+  <script src="{{ mix('js/app.js') }}"></script>
 
 </html>

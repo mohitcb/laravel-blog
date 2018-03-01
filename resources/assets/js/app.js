@@ -6,8 +6,12 @@
  */
 
 require('./bootstrap');
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-window.Vue = require('vue');
+Vue.use(Vuex);
+import store from './store';
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -15,8 +19,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('counter', require('./components/Counter'));
+Vue.component('todos', require('./components/Todos'));
+
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store: new Vuex.Store(store)
 });

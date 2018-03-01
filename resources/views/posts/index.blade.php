@@ -66,6 +66,7 @@
 
 				</tbody>
 			</table>
+			<counter></counter>
 
 			<div class="text-center">
 			</div>
