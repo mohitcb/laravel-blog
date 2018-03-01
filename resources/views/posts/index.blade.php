@@ -30,22 +30,17 @@
 	            {!! Form::close() !!}
             </div>
 		</div>
-		    	<post-list></post-list>
-		    	<counter></counter>
 
-<<<<<<< HEAD
-					@endforeach
 
 				</tbody>
 			</table>
+			<post-list></post-list>
+
 			<counter></counter>
 
 			<div class="text-center">
 			</div>
-			@endif
 		</div>
-=======
->>>>>>> c5790b130c69fe7e7580d6b0514952f9351bd27a
 	</div>
 
 @stop

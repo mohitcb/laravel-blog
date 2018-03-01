@@ -5,14 +5,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-<<<<<<< HEAD
-require('./bootstrap');
-import Vue from 'vue';
-import Vuex from 'vuex';
 
-Vue.use(Vuex);
-import store from './store';
-=======
+
  require('./bootstrap');
 
 import axios from 'axios';
@@ -24,8 +18,6 @@ window.Vue = Vue;
 window.axios = axios;
 
 
-Vue.use(Vuex);
->>>>>>> c5790b130c69fe7e7580d6b0514952f9351bd27a
 
 
 /**
@@ -36,17 +28,10 @@ Vue.use(Vuex);
 
 Vue.component('counter', require('./components/Counter'));
 Vue.component('todos', require('./components/Todos'));
-<<<<<<< HEAD
-
+Vue.component('post-list', require('./Post'));
 
 const app = new Vue({
     el: '#app',
     store: new Vuex.Store(store)
 });
-=======
-Vue.component('post-list', require('./Post'));
-new Vue({
-  el: '#app',
-  store: new Vuex.Store(store) 
-});
->>>>>>> c5790b130c69fe7e7580d6b0514952f9351bd27a
+
