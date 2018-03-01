@@ -30,38 +30,10 @@
 	            {!! Form::close() !!}
             </div>
 		</div>
-		<div class="col-md-12">
-			@if(count($posts) > 0)
-			<table id="post-table" class="table">
-				<thead>
-					<th>#</th>
-					<th>Cover Image</th>
-					<th></th>
-					<th>Title</th>
-					<th>Body</th>
-					<th>Created At</th>
-					<th></th>
-				</thead>
+		    	<post-list></post-list>
+		    	<counter></counter>
 
-				<tbody>
-					
-					@foreach ($posts as $post)
-						<tr>
-							<th>{{ $post->id }}</th>
-							<td><img style="width:30%" src="/storage/cover_images/{{$post->cover_image}}"><td>
-
-							<td>{{ $post->title }}</td>
-							<td>{{ substr(strip_tags($post->body), 0, 50) }}{{ strlen(strip_tags($post->body)) > 50 ? "..." : "" }}</td>
-							<td>{{ date('M j, Y', strtotime($post->created_at)) }}</td>
-							<td><a href="{{ route('posts.show', $post->slug) }}" class="btn btn-default btn-sm">View</a>
-							@if(!Auth::guest())
-								@if(Auth::user()->id == $post->user_id)		
-								<!--  <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-default btn-sm">Edit</a> -->
-								@endif
-							@endif
-							</td>
-						</tr>
-
+<<<<<<< HEAD
 					@endforeach
 
 				</tbody>
@@ -72,6 +44,8 @@
 			</div>
 			@endif
 		</div>
+=======
+>>>>>>> c5790b130c69fe7e7580d6b0514952f9351bd27a
 	</div>
 
 @stop
