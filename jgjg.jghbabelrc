@@ -1,0 +1,12 @@
+  {
+    "plugins": ["babel-plugin-object-rest-spread"]
+  }
+
+  {
+    "plugins": [
+      ["babel-plugin-object-rest-spread", {
+        "loose": true,
+        "extends": true
+      }]
+    ]
+  }

@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 <body>
     <div id="app">

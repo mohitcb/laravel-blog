@@ -19,7 +19,7 @@ class PostsController extends Controller
     public function __construct()
     {
         //if(Auth::guard('web')->check()){
-          $this->middleware('auth', ['except' => ['index','show','searchPost']]);
+          $this->middleware('auth', ['except' => ['index','show','searchPost','postlist']]);
         //}
         
     }
@@ -27,9 +27,20 @@ class PostsController extends Controller
 	public function index()
     {   
         $posts = Post::orderBy('id', 'desc')->paginate(10);
+        // $posts = Post::where('id','=',4)->first();
         //$user_id=auth()->user()->iconv(in_charset, out_charset, str)d;
         //$user = User::find($user_id);
+        // return response()->json(['results'=>$posts]);
         return view('posts.index')->withPosts($posts);
+    }
+    public function postlist()
+    {   
+        $posts = Post::orderBy('id', 'desc')->paginate(10);
+        // $posts = Post::where('id','=',4)->first();
+        //$user_id=auth()->user()->iconv(in_charset, out_charset, str)d;
+        //$user = User::find($user_id);
+        return response()->json(['results'=>$posts]);
+        // return view('posts.index')->withPosts($posts);
     }
 
 	public function create()
@@ -42,7 +53,7 @@ class PostsController extends Controller
 		// Form View
 		request()->validate([
             'title' => 'required',
-            'slug'  => 'required|min:5|max:255|unique:posts,slug',
+            // 'slug'  => 'required|min:5|max:255|unique:posts,slug',
             'body' => 'required',
             'cover_image' => 'image|nullable|max:1999'
         ]);
@@ -70,7 +81,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         // $post->slug = Str::slug($post->title);
         $post->user_id = auth()->user()->id;
-        $post->slug = str_slug($request->input('slug'),'-');
+        // $post->slug = str_slug($request->input('slug'),'-');
         $post->cover_image = $fileNameToStore;
         $post->save();
 
