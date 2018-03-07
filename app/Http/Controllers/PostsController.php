@@ -131,7 +131,7 @@ class PostsController extends Controller
         //$post = Post::find($id);
         $post->body = $request->input('body');
         $post->title = $request->input('title');
-        $post->slug = str_slug($request->input('slug'),'-');
+        //$post->slug = str_slug($request->input('slug'),'-');
         if($request->hasFile('cover_image')){
             $post->cover_image = $fileNameToStore;
         }
