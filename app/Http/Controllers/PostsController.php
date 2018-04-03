@@ -87,7 +87,7 @@ class PostsController extends Controller
 
         return redirect()->route('posts.index')->with('success','post created successfully');
 	}
-
+    //edit form
  	public function edit($id)
     {
         $post = Post::find($id);
